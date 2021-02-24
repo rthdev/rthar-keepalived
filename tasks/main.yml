@@ -1,2 +1,11 @@
 ---
 # tasks file for rthdev-keepalived
+- block:
+
+  - name: Install keepalived package
+    yum:
+      name: keepalived
+      state: installed
+
+  - name: 
+  become: true
