@@ -6,14 +6,14 @@ global_defs {
 vrrp_script check_{{ rthar_keepalived_script_check_cmd }} {
   script "/bin/pidof {{ rthar_keepalived_script_check_cmd }}"
   weight {{ rthar_keepalived_script_weight }}
-  interval {{ rthar_keepalived_script_check_interval }} 
+  interval {{ rthar_keepalived_script_check_interval }}
 }
 
 vrrp_instance {{ rthar_keepalived_instance_name }} {
     state {{ rthar_keepalived_state }}
     interface {{ rthar_keepalived_interface }}
     virtual_router_id {{ rthar_keepalived_virtual_router_id }}
-    priority {{ rthar_keepalived_priority }} 
+    priority {{ rthar_keepalived_priority }}
     advert_int 1
     authentication {
         auth_type PASS
